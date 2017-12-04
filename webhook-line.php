@@ -15,7 +15,8 @@ if($method == 'POST'){
 		case 'anything':
 			$speech = "Yes, you can type anything here.";
 			break;
-		
+		case 'input.greeting':
+			$speech = "สวัสดีค่ะ";		
 		default:
 			$speech = "Sorry, I didnt get that. Please ask me something else.";
 			break;
