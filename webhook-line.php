@@ -16,10 +16,15 @@ if($method == 'POST'){
 			$speech = "Yes, you can type anything here.";
 			break;
 		case 'input.greeting':
-			$speech = "สวัสดีค่ะ";		
+			$speech = "สวัสดีค่ะ";
+			break;
+		case 'input.unknown':
+			$speech = "unknown";
+			break;		
 		default:
 			$speech = "Sorry, I didnt get that. Please ask me something else.";
 			break;
+			
 	}
 	$response = new \stdClass();
 	$response->speech = $speech;
