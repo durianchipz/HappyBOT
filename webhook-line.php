@@ -26,11 +26,20 @@ if($method == 'POST'){
 			break;
 			
 	}
-	$response = new \stdClass();
+	$json = json_encode([
+                'speech'   => $speech,
+                'displayText' => $speech,
+                'data' => [],
+                'contextOut' => [],
+                'source' =>  'webhook'
+        ]);
+	
+	/*$response = new \stdClass();
 	$response->speech = $speech;
 	$response->displayText = $speech;
 	$response->source = "agent";
-	echo json_encode($response);
+	echo json_encode($response);*/
+	echo $json;
 }
 else
 {
